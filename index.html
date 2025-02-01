@@ -8,50 +8,441 @@
   <!-- tailwindcss  -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- font-family  -->
+  <link rel="stylesheet" href="/style/style.css">
+  <!-- font-awesome cdn-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-text {
+      animation: fadeIn 2s ease-in-out;
+      opacity: 1;
+    }
+
+    .animate-text {
+      animation-delay: 0.5s;
+    }
+  </style>
 </head>
 
 <body>
   <header>
     <!-- header section -->
-    <div class="flex items-center justify-around">
+    <div class="flex items-center justify-around mt-[24px]  max-sm:hidden ">
       <!-- logo section -->
-      <div>
-        <img src="/c2-assets/logo-header.png" alt="">
+      <div class=" max-sm:hidden">
+        <img src="./c2-assets/logo-header.png" alt="">
+
+
       </div>
+
       <!-- nav section -->
-      <div>
-        <nav class="flex items-center justify-center list-none gap-7">
-          <li><a href="Product">Product</a></li>
-          <li><a href="Services">Services</a></li>
-          <li><a href="Contact-us">Contact us</a></li>
 
-        </nav>
-      </div>
+      <nav class="flex items-center justify-center list-none gap-7 ml-[100px] font-normal text-[#111111] max-sm:hidden">
+        <li><a href="Product">Product</a></li>
+        <li><a href="Services">Services</a></li>
+        <li><a href="Contact-us">Contact us</a></li>
+
+      </nav>
+
+
       <!-- btn section -->
-      <div class="flex gap-7">
-        <div>
-                  <!-- Search icon -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                  <!-- shop icon -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-        </div>
+      <div class="flex gap-7 max-sm:hidden">
+        <div class=" flex mr-[40px] items-center gap-[32px] ">
+          <!-- Search icon -->
+          <svg class="w-8" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <!-- shop icon -->
+          <svg class="w-8" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
 
-        <!-- button group -->
-        <div class="flex gap-7">
-          <button class="border-2 border-black px-5 py-2 rounded-[8px]">Login</button>
-          <button class="bg-[#179800] px-[30px] py-[4px] rounded-[8px] ">Register</button>
+
+          <!-- button group -->
+          <div class="flex gap-7">
+            <button class="border-2 border-black px-5 py-2 rounded-[8px] items-center">Login</button>
+            <button class="bg-[#179800] px-[30px] py-[4px] rounded-[8px] ">Register</button>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
 
+    </div>
+    <!-- mobile  -->
+    <div class="max-sm:flex items-center justify-between ">
+      <!-- logo icon -->
+      <div class="lg:hidden max-sm:ml-[30px]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="44" viewBox="0 0 50 44" fill="none">
+          <path
+            d="M45.9 14.3C45.7 13.9 45.2 13.8 44.8 14C42.6 15.5 37.1 17.2 37.1 17.2C17.5 22.2 25.8 43.5 25.8 43.5C35.3 44.3 44.3 42.3 48 32.2C50.8 24.2 47.2 16.6 45.9 14.3Z"
+            fill="#638B3F" />
+          <path d="M25.7001 43.5C25.7001 42.5 29.2001 29.2 41.3001 22.8C41.3001 22.8 30.1001 32.8 25.7001 43.5Z"
+            fill="#82AF58" />
+          <path
+            d="M8.99999 0.699994C9.39999 0.299994 9.99999 0.299994 10.4 0.699994C12.8 3.19999 19.2 7.09999 19.2 7.09999C42.4 19.2 25.7 43.6 25.7 43.6C13.4 41.9 2.69999 36.7 1.09999 22.8C-0.100015 11.8 6.59999 3.29999 8.99999 0.699994Z"
+            fill="#88C057" />
+          <path d="M25.8 43.5C26.1 42.2 25.6 24.4 12.3 12.8C12.2 12.7 23.4 28.7 25.8 43.5Z" fill="#638B3F" />
+        </svg>
+
+      </div>
+      <!-- dopdown menu  -->
+
+      <div class="navbar-start lg:hidden  relative ">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"
+              class="mr-[-250px]">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3.75 8.4375C3.75 7.91973 4.16973 7.5 4.6875 7.5H25.3125C25.8303 7.5 26.25 7.91973 26.25 8.4375C26.25 8.95527 25.8303 9.375 25.3125 9.375H4.6875C4.16973 9.375 3.75 8.95527 3.75 8.4375ZM3.75 15C3.75 14.4822 4.16973 14.0625 4.6875 14.0625H25.3125C25.8303 14.0625 26.25 14.4822 26.25 15C26.25 15.5178 25.8303 15.9375 25.3125 15.9375H4.6875C4.16973 15.9375 3.75 15.5178 3.75 15ZM3.75 21.5625C3.75 21.0447 4.16973 20.625 4.6875 20.625H25.3125C25.8303 20.625 26.25 21.0447 26.25 21.5625C26.25 22.0803 25.8303 22.5 25.3125 22.5H4.6875C4.16973 22.5 3.75 22.0803 3.75 21.5625Z"
+                fill="#179800" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            <li><a>Product</a></li>
+            <li><a>Services</a></li>
+            <li><a>Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class=" max-sm: mt-[10px] text-[#179800] bg-[#179800] border-1.3 border-[#179800] xl:hidden lg:hidden">
+
+
+  </header>
+  <!-- home section -->
+  <section class="mt-[100px]">
+
+    <div class=" justify-center flex-col items-center text-center ">
+      <h1 class=" animate-text text-[56px] font-semibold max-sm:text-[32px]">Freshness <span class="text-[#179800]">You
+          Can <br>
+          Count</span> On, Prices <br class="lg:hidden xl:hidden"> You’ll Love!</h1>
+      <p class="text-[20px] mt-[32px] max-sm:text-[16px]">Shop your daily essentials at unbeatable prices. From fresh
+        produce to pantry
+        <br>staples, we’ve got you
+        covered every day!
+      </p>
+      <div class="flex items-center justify-center">
+        <img src="./c2-assets/hero-vegetables.png" alt="">
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- serviec section -->
+  <section class="mt-[36px]">
+    <div class="flex justify-start items-center lg:ml-[300px] ">
+      <h1 class="text-[36px] font-semibold text-[#179800]">Services</h1>
+    </div>
+    <!--serivec section card group -->
+    <div class="flex items-center justify-center gap-[20px] mt-[80px] max-sm:flex-col">
+      <!-- serivec section card-1 -->
+
+      <div
+        class="w-[424px] h-[367px] flex-col items-center justify-center text-center  bg-[#EFEBE3] rounded-[16px] max-sm:w-[356.55px] max-sm:h-[308.61px] ">
+        <div
+          class="flex justify-center items-center mt-[50px]  ml-[130px] rounded-[100px]  w-[150px] h-[150px] bg-[#FFFFFF] max-sm:w-[126.14px] max-sm:h-[126.14px] max-sm:ml-[110px]">
+          <img src="./c2-assets/service.png" alt="">
+        </div>
+
+        <h1 class="text-[24px] font-semibold">24/7 Services</h1>
+        <p class="text-[18px] font-light">24/7 services ensure round-the-clock availability, providing support anytime,
+          anywhere.</p>
+      </div>
+      <!-- serivce section card-2 -->
+      <div
+        class="w-[424px] h-[367px] flex-col items-center justify-center text-center  bg-[#EFEBE3] rounded-[16px] max-sm:w-[356.55px] max-sm:h-[308.61px] ">
+        <div
+          class=" flex items-center justify-center  mt-[50px]  ml-[130px] rounded-[100px]  w-[150px] h-[150px] bg-[#FFFFFF] max-sm:w-[126.14px] max-sm:h-[126.14px] max-sm:ml-[110px]">
+          <img src="./c2-assets/delivery.png" alt="">
+        </div>
+
+        <h1 class="text-[24px] font-semibold">Fast Delivery</h1>
+        <p class="text-[18px] font-light">Fast delivery ensures that customers receive their orders quickly and
+          efficiently.</p>
+      </div>
+      <!-- serivce section card-3 -->
+      <div
+        class="w-[424px] h-[367px] flex-col items-center justify-center text-center  bg-[#EFEBE3] rounded-[16px] max-sm:w-[356.55px] max-sm:h-[308.61px]">
+        <div
+          class="flex items-center justify-center mt-[50px] ml-[130px] rounded-[100px]  w-[150px] h-[150px] bg-[#FFFFFF] max-sm:w-[126.14px] max-sm:h-[126.14px] max-sm:ml-[110px]">
+          <img src="./c2-assets/healthy.png" alt="">
+        </div>
+
+        <h1 class="text-[24px] font-semibold">Healthy Products</h1>
+        <p class="text-[18px] font-light text-wrap">Healthy products are made with natural ingredients that promote
+          overall well-being.</p>
+      </div>
+
+    </div>
+  </section>
+  <!-- Popular Products -->
+  <section class="h-[775px] bg-[#EFEBE3] mt-[50px]">
+    <div class="flex justify-start items-center lg:ml-[300px]">
+      <h1 class="text-[36px] font-semibold text-[#179800]">
+        Popular Products
+      </h1>
+    </div>
+    <!-- products card group -->
+
+    <div class="flex items-center justify-center gap-[2rem] mt-[4rem] max-sm:flex-col">
+      <!-- products card 1 -->
+      <div class="border-2 w-[425px] h-[402px]   bg-gradient-to-br from-green-600 to-green-100 max-sm:w-[357.55px]">
+        <div class="bg-[url(./c2-assets/vegetable-offer.png)] bg-no-repeat bg-right-bottom z-1 w-full h-[370px] 
+         mb-[-50px] ">
+          <h1 class="mt-[30px] text-[30px] ml-[20px] text-[#ffff] font-[600]">30% off</h1>
+          <p class="ml-[20px] ">discover a world of treats, toys and <br>essentials handpicked for</p>
+          <button class="bg-[#ffffff] ml-[20px] pl-[20px] pr-[20px] pt-[10px] pb-[10px] rounded-[10px] mt-[20px]">Buy
+            Now</button>
+
+        </div>
+
+      </div>
+      <!-- products card 2 -->
+      <div class="grid grid-cols-3  gap-[23px] max-sm:grid-cols-2">
+        <!-- porducts card 2.1 -->
+        <div
+          class=" flex w-[275px] h-[118px] justify-center border border-amber-300 items-center  bg-[#ffff] gap-[2rem] rounded-[10px] max-sm:w-[171.88px] max-sm:h-[73px] ">
+          <div class="bg-[#EFEBE3] rounded-[10px] flex pt-[10px] pb-[10px] pr-[10px] pl-[10px]
+  max-sm:w-[53px] max-sm:h-[53px] ">
+            <img src="./c2-assets/onion.png" alt="">
+          </div>
+          <div class="">
+            <i class="fa-solid fa-star max-sm:text-[10px]"></i><span class="max-sm:text-[10px]">4.5</span>
+            <h1 class="max-sm:text-[10px]">Onion 1 KG</h1>
+            <h2 class="max-sm:text-[10px]">$39.99</h2>
+          </div>
+        </div>
+
+        <!-- porducts card 2.2 -->
+        <div
+          class=" flex w-[275px] h-[118px] justify-center border border-amber-300 items-center  bg-[#ffff] gap-[2rem] rounded-[10px] max-sm:w-[171.88px] max-sm:h-[73px] ">
+          <div class="bg-[#EFEBE3] rounded-[10px] flex pt-[10px] pb-[10px] pr-[10px] pl-[10px]
+          max-sm:w-[53px] max-sm:h-[53px] ">
+            <img src="./c2-assets/tomato (1).png" alt="">
+          </div>
+          <div class="">
+            <i class="fa-solid fa-star max-sm:text-[10px]"></i><span class="max-sm:text-[10px]">4.5</span>
+            <h1 class="max-sm:text-[10px]">Tomato 500 g</h1>
+            <h2 class="max-sm:text-[10px]">$39.99</h2>
+          </div>
+        </div>
+        <!-- porducts card 2.3 -->
+        <div
+          class=" flex w-[275px] h-[118px] justify-center border border-amber-300 items-center  bg-[#ffff] gap-[2rem] rounded-[10px] max-sm:w-[171.88px] max-sm:h-[73px] ">
+          <div class="bg-[#EFEBE3] rounded-[10px] flex pt-[10px] pb-[10px] pr-[10px] pl-[10px]
+          max-sm:w-[53px] max-sm:h-[53px] ">
+            <img src="./c2-assets/potato.png" alt="">
+          </div>
+          <div class="">
+            <i class="fa-solid fa-star max-sm:text-[10px]"></i><span class="max-sm:text-[10px]">4.5</span>
+            <h1 class="max-sm:text-[10px]">Potato 1 KG</h1>
+            <h2 class="max-sm:text-[10px]">$39.99</h2>
+          </div>
+        </div>
+        <!-- porducts card 2.4 -->
+        <div
+          class=" flex w-[275px] h-[118px] justify-center border border-amber-300 items-center  bg-[#ffff] gap-[2rem] rounded-[10px] max-sm:w-[171.88px] max-sm:h-[73px] ">
+          <div class="bg-[#EFEBE3] rounded-[10px] flex pt-[10px] pb-[10px] pr-[10px] pl-[10px]
+          max-sm:w-[53px] max-sm:h-[53px] ">
+            <img src="./c2-assets/tomato (1).png" alt="">
+          </div>
+          <div class="">
+            <i class="fa-solid fa-star max-sm:text-[10px]"></i><span class="max-sm:text-[10px]">4.5</span>
+            <h1 class="max-sm:text-[10px]">Tomato 500 g</h1>
+            <h2 class="max-sm:text-[10px]">$39.99</h2>
+          </div>
+        </div>
+        <!-- porducts card 2.5 -->
+        <div
+          class=" flex w-[275px] h-[118px] justify-center border border-amber-300 items-center  bg-[#ffff] gap-[2rem] rounded-[10px] max-sm:w-[171.88px] max-sm:h-[73px] ">
+          <div class="bg-[#EFEBE3] rounded-[10px] flex pt-[10px] pb-[10px] pr-[10px] pl-[10px]
+          max-sm:w-[53px] max-sm:h-[53px] ">
+            <img src="./c2-assets/onion.png" alt="">
+          </div>
+          <div class="">
+            <i class="fa-solid fa-star max-sm:text-[10px]"></i><span class="max-sm:text-[10px]">4.5</span>
+            <h1 class="max-sm:text-[10px]">Onion 1 KG</h1>
+            <h2 class="max-sm:text-[10px]">$39.99</h2>
+          </div>
+        </div>
+        <!-- porducts card 2.6 -->
+        <div
+          class=" flex w-[275px] h-[118px] justify-center border border-amber-300 items-center  bg-[#ffff] gap-[2rem] rounded-[10px] max-sm:w-[171.88px] max-sm:h-[73px] ">
+          <div class="bg-[#EFEBE3] rounded-[10px] flex pt-[10px] pb-[10px] pr-[10px] pl-[10px]
+          max-sm:w-[53px] max-sm:h-[53px] ">
+            <img src="./c2-assets/tomato (1).png" alt="">
+          </div>
+          <div class="">
+            <i class="fa-solid fa-star max-sm:text-[10px]"></i><span class="max-sm:text-[10px]">4.5</span>
+            <h1 class="max-sm:text-[10px]">Tomato 500 g</h1>
+            <h2 class="max-sm:text-[10px]">$39.99</h2>
+          </div>
+        </div>
+        <!-- porducts card 2.7 -->
+        <div
+          class=" flex w-[275px] h-[118px] justify-center border border-amber-300 items-center  bg-[#ffff] gap-[2rem] rounded-[10px] max-sm:w-[171.88px] max-sm:h-[73px] ">
+          <div class="bg-[#EFEBE3] rounded-[10px] flex pt-[10px] pb-[10px] pr-[10px] pl-[10px]
+          max-sm:w-[53px] max-sm:h-[53px] ">
+            <img src="./c2-assets/onion.png" alt="">
+          </div>
+          <div class="">
+            <i class="fa-solid fa-star max-sm:text-[10px]"></i><span class="max-sm:text-[10px]">4.5</span>
+            <h1 class="max-sm:text-[10px]">Onion 1 KG</h1>
+            <h2 class="max-sm:text-[10px]">$39.99</h2>
+          </div>
+        </div>
+        <!-- porducts card 2.8 -->
+        <div
+          class=" flex w-[275px] h-[118px] justify-center border border-amber-300 items-center  bg-[#ffff] gap-[2rem] rounded-[10px] max-sm:w-[171.88px] max-sm:h-[73px] ">
+          <div class="bg-[#EFEBE3] rounded-[10px] flex pt-[10px] pb-[10px] pr-[10px] pl-[10px]
+        max-sm:w-[53px] max-sm:h-[53px] ">
+            <img src="./c2-assets/potato.png" alt="">
+          </div>
+          <div class="">
+            <i class="fa-solid fa-star max-sm:text-[10px]"></i><span class="max-sm:text-[10px]">4.5</span>
+            <h1 class="max-sm:text-[10px]">Potato 1 KG</h1>
+            <h2 class="max-sm:text-[10px]">$39.99</h2>
+          </div>
+        </div>
+
+        <!-- porducts card 2.9 -->
+        <div
+          class=" flex w-[275px] h-[118px] justify-center border border-amber-300 items-center  bg-[#ffff] gap-[2rem] rounded-[10px] max-sm:w-[171.88px] max-sm:h-[73px] max-sm:hidden ">
+          <div class="bg-[#EFEBE3] rounded-[10px] flex pt-[10px] pb-[10px] pr-[10px] pl-[10px]
+          max-sm:w-[53px] max-sm:h-[53px] ">
+            <img src="./c2-assets/potato.png" alt="">
+          </div>
+          <div class="">
+            <i class="fa-solid fa-star max-sm:text-[10px]"></i><span class="max-sm:text-[10px]">4.5</span>
+            <h1 class="max-sm:text-[10px]">Potato 1 KG</h1>
+            <h2 class="max-sm:text-[10px]">$39.99</h2>
+          </div>
+        </div>
+
+
+      </div>
+
+  </section>
+  <!-- Arrival & Offers -->
+  <section class=" mt-[10rem]">
+    <div class="flex justify-start items-center lg:ml-[300px]">
+      <h1 class="text-[36px] font-semibold text-[#179800] max-sm:text-[24px] max-sm:ml-[15px]">
+        Arrival & Offers
+      </h1>
+    </div>
+
+    <!-- arrival section -->
+    <div class="flex items-center justify-center gap-[2rem]  max-sm:flex-col">
+      <!-- arrival card-1 -->
+      <div
+        class="flex w-[780px] h-[344px] border border-amber-300 justify-around items-center bg-[#115414] rounded-[24px] max-sm:w-[358px] max-sm:h-[190px]">
+        <div class="flex-col justify-center items-center  h-full mt-[50px] max-sm:ml-[-10]  ">
+          <img src="./c2-assets/dawat-logo.png" class="max-sm:w-[10rem]">
+          <button
+            class="bg-[#63B76D] pl-[50px] pr-[50px]  pt-[14px] pb-[14px] mt-[30px] rounded-[13px] max-sm:text-[12px] max-sm:pt-[8px] max-sm:pb-[8px] text-[#ffffff] max-sm:pr-0 max-sm:pl-0 max-sm:w-[141px] max-sm:ml-[10px]">Cook
+            Exotic Dishes</button>
+          <p
+            class="text-[40px] font-[700] text-[#ffff] mt-[30px] max-sm:mt-[10px] max-sm:text-[20px] max-sm:-ml-[-10px]">
+            UP to 20% OFF</p>
+        </div>
+        <div class="mb-[20px] ">
+          <img src="./c2-assets/dawat-mock-up.png" class="max-sm:h-[10rem] mb-[-50px] w-[]">
+        </div>
+      </div>
+
+      <!-- arrival card-2 -->
+      <div
+        class="flex w-[540px] h-[344px]  bg-[#102861] items-center justify-around rounded-[24px] max-sm:w-[358px] max-sm:h-[190px] ">
+        <div class="h-full flex-col justify-center items-center mt-[60px]">
+          <img src="./c2-assets/india-gate-logo.png" class="max-sm:w-[4rem]">
+          <button
+            class="bg-[#2A4D97] pl-[40px] pr-[40px] pt-[14px] pb-[14px] text-[#fff] rounded-[12px] mt-[20px] max-sm:mt-0 max-sm:pl-0 max-sm:pr-0 max-sm:text-[12px] max-sm:w-[126px] max-sm:pt-[8px] max-sm:pb-[8px]" >World’s No.1
+            Rice</button>
+          <p class="text-[40px] font-[700] text-[#fff] mt-[20px] max-sm:mt-[10px] max-sm:text-[20px] max-sm:-ml-[-2px]">UP to 40% OFF</p>
+        </div>
+
+        <div class="">
+          <img src="./c2-assets/india-gate-mock-up.png" class="max-sm:h-[10rem]">
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- form section -->
+  <section class="h-[457px] mt-[10rem] flex items-center justify-center z-20 mb-[-200px] max-sm:mb-[-220px]">
+    <div class="flex items-center justify-around w-[1320px] bg-[#EFEBE3] pt-[50px] pb-[50px] max-sm:flex-col max-sm:w-[358px] rounded-[20px]">
+      <div >
+        <img src="./c2-assets/vegetable-busket.png"  class="w-[442px] h-[348px] max-sm:w-[232px] max-sm:h-[182px]">
+
+      </div>
+      <div class="max-sm:flex-col max-sm:items-center max-sm:justify-center text-center max-sm:pt-[100px] ">
+        <h1 class="text-[36px] font-semibold max-sm:text-[20px] z-10 max-sm:text-[#179800]">Get Grocery News!</h1>
+        <p class="font-normal mt-[20px] mb-[20px] ">
+          Exclusive training tips, ticks, product deals and more.
+        </p>
+        <form action="">
+          <input type="email" placeholder="Enter email" class="pr-[209px] pl-[18px] pt-[18px] pb-[18px]  mb-[30px] max-sm:pr-[130px]">
+         
+        </form>
+        <button class="bg-[#179800] pt-[8px] pb-[8px] pl-[15px] pr-[15px] rounded-[8px] text-[#ffff]">Subscribe</button>
+
+      </div>
+      
+    
+    </div>
+
+  </section>
+  <!-- footer section -->
+   <section class="h-[800px] bg-[#179800] relative -z-10">
+     
+    <!-- footer  -->
+    <div class="mt-[400px] absolute flex items-center justify-around  w-full max-sm:flex-col h-[400px]">
+      <div>
+        <img src="/c2-assets/logo-footer.png" alt="">
+        <p class="text-[#fff]">Discover a world of treats, toys, and <br> essentials handpicked for your furry <br> friends</p>
+      </div>
+      <!-- footer nav -->
+      <div class="max-sm:ml-[-200px]">
+         <ul class="flex-col text-[#fff]">
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact us</a></li>
+         </ul>
+      </div>
+      <!-- socail icon -->
+       <div class="max-sm:ml-[-110px]">
+        <h3 class="mb-[20px] text-[#fff]">Follow Us</h3>
+         <div class="flex gap-8 text-[20px] text-[#ffff]">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-youtube"></i>
+
+         </div>
+       </div>
+      
+    </div>
+
+   </section>
 
 </body>
 
